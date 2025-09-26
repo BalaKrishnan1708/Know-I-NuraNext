@@ -4,12 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Dark Futuristic Theme with Purple-to-Teal Gradient */
-  --background: oklch(0.05 0 0); /* Deep black background */
+  /* Blue Theme with Purple Accents */
+  --background: oklch(0.12 0.03 240); /* Dark blue background */
   --foreground: oklch(0.98 0 0); /* White text for readability */
-  --card: oklch(0.08 0 0); /* Very dark card background */
+  --card: oklch(0.15 0.05 240); /* Dark blue card background */
   --card-foreground: oklch(0.98 0 0); /* White text on cards */
-  --popover: oklch(0.08 0 0); /* Very dark popover background */
+  --popover: oklch(0.15 0.05 240); /* Dark blue popover background */
   --popover-foreground: oklch(0.98 0 0); /* White text on popovers */
   --primary: oklch(0.7 0.3 280); /* Glowing purple */
   --primary-foreground: oklch(0.98 0 0); /* White text on primary */
@@ -41,12 +41,12 @@
 }
 
 .dark {
-  /* Dark Futuristic Theme with Purple-to-Teal Gradient - same as root */
-  --background: oklch(0.05 0 0); /* Deep black background */
+  /* Blue Theme with Purple Accents - same as root */
+  --background: oklch(0.12 0.03 240); /* Dark blue background */
   --foreground: oklch(0.98 0 0); /* White text for readability */
-  --card: oklch(0.08 0 0); /* Very dark card background */
+  --card: oklch(0.15 0.05 240); /* Dark blue card background */
   --card-foreground: oklch(0.98 0 0); /* White text on cards */
-  --popover: oklch(0.08 0 0); /* Very dark popover background */
+  --popover: oklch(0.15 0.05 240); /* Dark blue popover background */
   --popover-foreground: oklch(0.98 0 0); /* White text on popovers */
   --primary: oklch(0.7 0.3 280); /* Glowing purple */
   --primary-foreground: oklch(0.98 0 0); /* White text on primary */
@@ -125,14 +125,11 @@
     @apply bg-background text-foreground;
   }
   
-  /* Dark Futuristic Gradient Background */
+  /* Blue Gradient Background */
   .gradient-bg {
-    background: linear-gradient(135deg, 
-      oklch(0.05 0 0) 0%,         /* Deep black */
-      oklch(0.08 0.02 280) 25%,   /* Very dark purple */
-      oklch(0.1 0.05 270) 50%,    /* Dark purple */
-      oklch(0.12 0.08 260) 75%,   /* Transition to dark blue */
-      oklch(0.1 0.1 200) 100%     /* Dark teal */
+    background: linear-gradient(180deg, 
+      oklch(0.15 0.05 240) 0%,    /* Dark navy blue top */
+      oklch(0.08 0.02 240) 100%   /* Darker blue bottom */
     );
   }
   
@@ -146,14 +143,11 @@
     border: 1px solid oklch(0.2 0 0);
   }
   
-  /* Hero section gradient with glow */
+  /* Hero section gradient with blue */
   .gradient-hero {
-    background: linear-gradient(135deg, 
-      oklch(0.05 0 0) 0%,         /* Deep black */
-      oklch(0.08 0.05 280) 25%,   /* Dark purple */
-      oklch(0.1 0.08 270) 50%,    /* More purple */
-      oklch(0.12 0.1 260) 75%,    /* Transition to blue */
-      oklch(0.1 0.12 200) 100%    /* Dark teal */
+    background: linear-gradient(180deg, 
+      oklch(0.15 0.05 240) 0%,    /* Dark navy blue top */
+      oklch(0.08 0.02 240) 100%   /* Darker blue bottom */
     );
   }
   
