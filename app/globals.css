@@ -157,17 +157,27 @@
     );
   }
   
-  /* Clean text effects - no blur */
+  /* Clean text effects - no blur, transparent background */
   .glow-purple {
     text-shadow: none;
+    background: transparent;
   }
   
   .glow-teal {
     text-shadow: none;
+    background: transparent;
   }
   
   .glow-pink {
     text-shadow: none;
+    background: transparent;
+  }
+  
+  /* Transparent logo styling */
+  .logo-transparent {
+    background: transparent;
+    text-shadow: none;
+    box-shadow: none;
   }
   
   /* Glowing button effects */
