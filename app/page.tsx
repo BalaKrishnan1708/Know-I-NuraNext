@@ -50,7 +50,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-4 animate-glow glow-button" asChild>
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSevEijnOQU5k8mACTZ-GFKO7cM0Zxq90fe0yby2qPrb49PYvw/viewform?usp=header"
+                  href="https://forms.gle/Hx4WotZesxX5mgZH6"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -98,7 +98,7 @@ export default function HomePage() {
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-4 bg-transparent" asChild>
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSevEijnOQU5k8mACTZ-GFKO7cM0Zxq90fe0yby2qPrb49PYvw/viewform?usp=header"
+                  href="https://forms.gle/Hx4WotZesxX5mgZH6"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -243,7 +243,7 @@ export default function HomePage() {
           </p>
           <Button size="lg" className="text-xl px-12 py-6 animate-glow" asChild>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSevEijnOQU5k8mACTZ-GFKO7cM0Zxq90fe0yby2qPrb49PYvw/viewform?usp=header"
+              href="https://forms.gle/Hx4WotZesxX5mgZH6"
               target="_blank"
               rel="noopener noreferrer"
             >

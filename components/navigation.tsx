@@ -44,7 +44,7 @@ export function Navigation() {
           <div className="hidden md:block">
             <Button asChild className="animate-glow">
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSevEijnOQU5k8mACTZ-GFKO7cM0Zxq90fe0yby2qPrb49PYvw/viewform?usp=header"
+                href="https://forms.gle/Hx4WotZesxX5mgZH6"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -85,7 +85,7 @@ export function Navigation() {
             <div className="px-3 py-2">
               <Button asChild className="w-full">
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSevEijnOQU5k8mACTZ-GFKO7cM0Zxq90fe0yby2qPrb49PYvw/viewform?usp=header"
+                  href="https://forms.gle/Hx4WotZesxX5mgZH6"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
