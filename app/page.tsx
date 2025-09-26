@@ -23,10 +23,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="animate-float">
-              <h1 className="text-6xl md:text-8xl font-bold text-balance mb-6">
-                <span className="text-primary glow-purple">Neuro</span>
-                <span className="text-secondary glow-teal">Nexus</span>
-                <span className="text-accent glow-pink"> 2025</span>
+              <h1 className="text-6xl md:text-8xl font-bold text-balance mb-6 text-primary">
+                NeuroNexus 2025
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-muted-foreground mb-4 text-balance relative">
@@ -72,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Know I Club Promotion */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 to-secondary/10">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="flex items-center justify-center gap-4 mb-4">
@@ -82,7 +80,7 @@ export default function HomePage() {
                 className="h-12 w-auto"
               />
               <h2 className="text-3xl md:text-4xl font-bold text-balance">
-                Organized by <span className="text-primary glow-purple">Know I Club</span>
+                Organized by <span className="text-primary">Know I Club</span>
               </h2>
             </div>
             <p className="text-lg text-muted-foreground mb-6">

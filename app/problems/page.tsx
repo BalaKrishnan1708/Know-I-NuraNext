@@ -118,9 +118,8 @@ export default function ProblemsPage() {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
-            <span className="text-primary glow-purple">Problem</span>
-            <span className="text-secondary glow-teal"> Statements</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance text-primary">
+            Problem Statements
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-balance max-w-3xl mx-auto">
             Choose your challenge and showcase your innovative solutions. Each problem is designed to test different
