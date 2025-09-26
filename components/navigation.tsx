@@ -12,19 +12,10 @@ export function Navigation() {
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-primary animate-glow">
               NuraNext
             </Link>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>by</span>
-              <img 
-                src="/logo-kowni.png" 
-                alt="Know I Club" 
-                className="h-8 w-auto"
-              />
-              <span className="text-primary font-medium">Know I Club</span>
-            </div>
           </div>
 
           <div className="hidden md:block">
