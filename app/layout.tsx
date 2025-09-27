@@ -10,8 +10,8 @@ import { ScrollProgress } from "@/components/scroll-progress"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "NuraNext 2025 - Powerpacked Tech Competition",
-  description: "Join the ultimate tech competition by Know I Club of SVCE on October 10-11, 2025",
+  title: "NeuroNexus 2025 - Powerpacked Tech Competition",
+  description: "Join the ultimate tech competition by Know I Club of SVCE on October 11-12, 2025",
   generator: "v0.app",
 }
 

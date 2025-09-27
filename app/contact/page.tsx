@@ -47,26 +47,26 @@ export default function ContactPage() {
     {
       name: "Arunima",
       role: "President",
-      email: "arunima@knowi.svce.ac.in",
-      phone: "+91 98765 43210",
+      email: "2022ad0589@svce.ac.in",
+      phone: "+91 98400 73069",
     },
     {
       name: "Adithi",
       role: "Vice President - Planning and Operations",
-      email: "adithi@knowi.svce.ac.in",
-      phone: "+91 87654 32109",
+      email: "2023cs0869@svce.ac.in",
+      phone: "+91 99949 02039",
     },
     {
       name: "Ajay",
       role: "Vice President - Research",
-      email: "ajay@knowi.svce.ac.in",
-      phone: "+91 76543 21098",
+      email: "2022ad0823@svce.ac.in",
+      phone: "+91 75300 54065",
     },
     {
-      name: "Susan",
+      name: "Clarinda Susan",
       role: "Secretary",
-      email: "susan@knowi.svce.ac.in",
-      phone: "+91 65432 10987",
+      email: "2022ad0599@svce.ac.in",
+      phone: "+91 94441 04800",
     },
   ]
 
