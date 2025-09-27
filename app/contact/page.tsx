@@ -148,13 +148,13 @@ export default function ContactPage() {
           </h2>
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
+            <div className="absolute left-4 sm:left-8 top-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent" style={{ height: 'calc(100% - 2rem)' }}></div>
 
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-8 sm:space-y-12 pb-8">
               {timeline.map((event, index) => {
                 const IconComponent = event.icon
                 return (
-                  <div key={index} className="relative flex items-start space-x-4 sm:space-x-6">
+                  <div key={index} className="relative flex items-start space-x-4 sm:space-x-6 mb-6">
                     {/* Timeline dot */}
                     <div className="relative z-10">
                       <div
