@@ -12,6 +12,7 @@ import {
   Gamepad2,
   Car,
   Building,
+  Users,
 } from "lucide-react"
 
 export default function ProblemsPage() {
