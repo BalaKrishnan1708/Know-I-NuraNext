@@ -217,6 +217,14 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-xl font-semibold text-primary">Yuniq</h3>
                   <p className="text-muted-foreground">TIDEL Park, Tharamani</p>
+                  <a 
+                    href="https://maps.app.goo.gl/RzsztAzGNu4ZjX6W8" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors underline"
+                  >
+                    View on Google Maps
+                  </a>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 mt-8">
                   <div>

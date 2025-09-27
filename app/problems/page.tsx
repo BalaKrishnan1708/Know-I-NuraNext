@@ -18,83 +18,83 @@ export default function ProblemsPage() {
   const problemStatements = [
     {
       id: 1,
-      title: "Quantum Machine Learning for Drug Discovery",
-      category: "Quantum Computing & Biomedical AI",
-      icon: Heart,
+      title: "AI-Enhanced Autonomous Navigation for Space Missions",
+      category: "Aerospace & Defense",
+      icon: Building,
       description:
-        "Develop a quantum machine learning algorithm to accelerate drug discovery by predicting molecular properties and interactions. The solution should leverage quantum computing principles to solve complex optimization problems in pharmaceutical research.",
+        "Lockheed Martin Space Systems requires an AI pipeline for autonomous spacecraft navigation using multi-sensor data, integrating machine learning with physics-based simulations for real-time path planning, obstacle avoidance, and decision-making under uncertainty, prioritizing efficiency, accuracy, and robustness.",
     },
     {
       id: 2,
-      title: "AI-Powered Financial Risk Assessment",
-      category: "FinTech",
+      title: "Market Impact Modelling with ML-Augmented Almgren-Chriss Execution",
+      category: "Finance",
       icon: Shield,
       description:
-        "Create an intelligent system that uses machine learning to assess financial risks in real-time, including credit scoring, fraud detection, and market volatility prediction. The system should integrate with existing financial databases and provide actionable insights.",
+        "Goldman Sachs aims to enhance market execution using machine learning to address complex, non-linear market impact functions and adapt to liquidity changes. By treating execution as a data-driven optimization problem under uncertainty, they seek to dynamically balance cost and risk. This initiative could save tens to hundreds of millions annually.",
     },
     {
       id: 3,
-      title: "Biomedical Image Analysis for Disease Detection",
-      category: "Biomedical AI",
-      icon: Brain,
+      title: "FinSight - AI for Proactive Money Management",
+      category: "Finance",
+      icon: Heart,
       description:
-        "Build a deep learning model that can analyze medical images (X-rays, MRIs, CT scans) to detect diseases and abnormalities. The solution should provide high accuracy, explainable results, and integrate with hospital management systems.",
+        "Build an AI system that analyzes transaction history along with contextual signals — such as calendar events, location, mood, or shared group expenses — to predict risky spending moments, suggest proactive savings strategies, and recommend fair adjustments for collaborative finances. The solution should empower users to make smarter, context-aware financial decisions.",
     },
     {
       id: 4,
-      title: "Quantum-Enhanced Portfolio Optimization",
-      category: "Quantum Computing & FinTech",
-      icon: Leaf,
+      title: "Multi-Agent AI for Planning",
+      category: "Business & Operations Management",
+      icon: Users,
       description:
-        "Design a quantum algorithm for portfolio optimization that considers multiple risk factors, market conditions, and investment constraints. The solution should outperform classical optimization methods and provide real-time portfolio recommendations.",
+        "Design a multi-agent AI system to solve a complex planning problem. Create at least three agents with distinct personas and constraints (e.g., 'Budget Bot,' 'Marketing Maven,' 'Logistics Lead') that must negotiate with each other to produce a valid and optimal plan for a given scenario, such as launching a product.",
     },
     {
       id: 5,
-      title: "AI-Driven Personalized Medicine",
-      category: "Biomedical AI",
-      icon: GraduationCap,
+      title: "AI-Powered Fashion Platform: Personalized Styling & Outfit Optimization",
+      category: "Business & Operations Management",
+      icon: ShoppingCart,
       description:
-        "Develop a machine learning system that personalizes treatment plans based on patient genetics, medical history, and lifestyle factors. The solution should predict drug responses and recommend optimal treatment strategies.",
+        "Develop an AI-powered SaaS fashion platform for personalized styling and outfit optimization. This platform will analyze body proportions, predict evolving style preferences, evaluate fabric comfort, and adapt to real-time trends. It will uniquely score outfit combinations to generate mix-and-match recommendations that optimize aesthetics, comfort, and social acceptance.",
     },
     {
       id: 6,
-      title: "Quantum Cryptography for Financial Security",
-      category: "Quantum Computing & FinTech",
-      icon: ShoppingCart,
+      title: "Adaptive ML for Insider Threat Detection",
+      category: "Cybersecurity",
+      icon: Brain,
       description:
-        "Create a quantum cryptography system for secure financial transactions and data protection. The solution should implement quantum key distribution and quantum-resistant encryption for banking and fintech applications.",
+        "Build an adaptive machine learning system that proactively detects and predicts insider threats. The system must analyze anomalous patterns in employee behavior across diverse data sources—including structured logs, communications, and system metadata—to generate real-time risk scores.",
     },
     {
       id: 7,
-      title: "AI-Powered Drug Interaction Predictor",
-      category: "Biomedical AI",
-      icon: Brain,
+      title: "Federated Causal Discovery for Drug Interaction Safety in Polypharmacy",
+      category: "Bio-Medical",
+      icon: Heart,
       description:
-        "Build an AI system that predicts drug-drug interactions and adverse effects by analyzing molecular structures, patient data, and clinical outcomes. The solution should help healthcare providers make safer prescription decisions.",
+        "Pfizer: Develop a privacy-preserving Federated Causal Discovery (FCD) ML framework that accurately identifies causal Drug-Drug Interactions (DDIs) leading to adverse events in polypharmacy patients. This framework must enable multiple independent hospitals to collaboratively train a global causal model on decentralized patient data without exchanging sensitive raw patient information.",
     },
     {
       id: 8,
-      title: "Quantum Machine Learning for Market Prediction",
-      category: "Quantum Computing & FinTech",
-      icon: Building,
+      title: "Classical ML for Gene Analysis",
+      category: "Bio-Medical",
+      icon: GraduationCap,
       description:
-        "Develop a quantum machine learning model for predicting financial market trends and stock prices. The solution should leverage quantum algorithms to process large-scale financial data and provide accurate predictions.",
+        "Develop an evolutionary classical machine learning (ML) software platform to rapidly and cost-effectively identify faulty genes and predict gene expression/variant detection from massive human genomic datasets. The core challenge is designing efficient and scalable classical ML models capable of processing and extracting complex genetic features at a significantly faster rate than current analytical methods.",
     },
     {
       id: 9,
-      title: "AI-Enhanced Medical Diagnosis Assistant",
-      category: "Biomedical AI",
+      title: "QuantumGuard - AI for QRNG Analysis",
+      category: "Quantum Computing",
       icon: Gamepad2,
       description:
-        "Create an AI-powered diagnostic assistant that helps doctors analyze symptoms, medical history, and test results to suggest possible diagnoses. The system should provide confidence scores and reasoning for its recommendations.",
+        "True randomness is essential for cryptography, simulations, and secure systems, but subtle biases or patterns in quantum random number generators (QRNGs) can compromise reliability. Build an AI that analyzes QRNG outputs in near real-time, detects anomalies or hidden correlations, and provides actionable insights to ensure high-quality, trustworthy randomness.",
     },
     {
       id: 10,
-      title: "Quantum-Enhanced Fraud Detection",
-      category: "Quantum Computing & FinTech",
+      title: "End-to-End Quantum-ML for Sparse Particle Track Reconstruction",
+      category: "Quantum Computing",
       icon: Smartphone,
       description:
-        "Develop a quantum-enhanced fraud detection system for financial transactions that can identify complex fraud patterns and anomalies in real-time. The solution should use quantum algorithms to process large datasets efficiently.",
+        "CERN is developing an end-to-end Quantum-ML approach for the challenging task of sparse particle track reconstruction. This innovative method aims to leverage quantum machine learning techniques to process the sparse data generated in particle detectors. The goal is to improve the efficiency and accuracy of identifying and reconstructing particle trajectories in high-energy physics experiments.",
     },
   ]
 
