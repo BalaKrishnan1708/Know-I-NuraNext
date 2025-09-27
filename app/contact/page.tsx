@@ -28,6 +28,13 @@ export default function ContactPage() {
       icon: Users,
     },
     {
+      date: "9th October",
+      title: "Closure of Registration for Shortlisted Teams",
+      description: "Last day for shortlisted teams to confirm registration and payment",
+      status: "upcoming",
+      icon: CheckCircle,
+    },
+    {
       date: "11th-12th October",
       title: "NeuroNexus Hackathon",
       description: "24-hour Machine Learning hackathon at Yuniq, TIDEL Park, Tharamani",
@@ -38,27 +45,27 @@ export default function ContactPage() {
 
   const contacts = [
     {
-      name: "Dr. Rajesh Kumar",
-      role: "Faculty Coordinator",
-      email: "rajesh.kumar@svce.ac.in",
+      name: "Arunima",
+      role: "President",
+      email: "arunima@knowi.svce.ac.in",
       phone: "+91 98765 43210",
     },
     {
-      name: "Priya Sharma",
-      role: "Student Coordinator",
-      email: "priya.sharma@student.svce.ac.in",
+      name: "Adithi",
+      role: "Vice President - Planning and Operations",
+      email: "adithi@knowi.svce.ac.in",
       phone: "+91 87654 32109",
     },
     {
-      name: "Arjun Patel",
-      role: "Technical Lead",
-      email: "arjun.patel@student.svce.ac.in",
+      name: "Ajay",
+      role: "Vice President - Research",
+      email: "ajay@knowi.svce.ac.in",
       phone: "+91 76543 21098",
     },
     {
-      name: "Sneha Reddy",
-      role: "Event Manager",
-      email: "sneha.reddy@student.svce.ac.in",
+      name: "Susan",
+      role: "Secretary",
+      email: "susan@knowi.svce.ac.in",
       phone: "+91 65432 10987",
     },
   ]
@@ -102,7 +109,7 @@ export default function ContactPage() {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance text-primary">
-            Contact & Timeline
+            Timeline and Contact
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-balance max-w-3xl mx-auto">
             Get all the information you need about the NeuroNexus timeline, submission guidelines, and how to reach us.
@@ -189,33 +196,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Submission Rules */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            Submission <span className="text-primary">Guidelines</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {submissionRules.map((rule, index) => (
-              <Card key={index} className="animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
-                <CardHeader>
-                  <CardTitle className="text-2xl text-primary">{rule.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {rule.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Contact Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -235,19 +215,19 @@ export default function ContactPage() {
             <CardContent className="text-center">
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-primary">Sri Venkateswara College of Engineering</h3>
-                  <p className="text-muted-foreground">Sriperumbudur, Tamil Nadu 602117</p>
+                  <h3 className="text-xl font-semibold text-primary">Yuniq</h3>
+                  <p className="text-muted-foreground">TIDEL Park, Tharamani</p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 mt-8">
                   <div>
-                    <h4 className="font-semibold mb-2 text-secondary">Competition Venue</h4>
-                    <p className="text-muted-foreground">Main Auditorium & Computer Labs</p>
-                    <p className="text-muted-foreground">Block A, Ground Floor</p>
+                    <h4 className="font-semibold mb-2 text-secondary">Venue</h4>
+                    <p className="text-muted-foreground">Yuniq, TIDEL Park</p>
+                    <p className="text-muted-foreground">Tharamani, Chennai</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-accent">Facilities Available</h4>
-                    <p className="text-muted-foreground">High-speed Internet, Power outlets</p>
-                    <p className="text-muted-foreground">Refreshments, Parking</p>
+                    <h4 className="font-semibold mb-2 text-accent">Facilities</h4>
+                    <p className="text-muted-foreground">Internet, Food, Refreshments</p>
+                    <p className="text-muted-foreground">Plug Points</p>
                   </div>
                 </div>
               </div>
@@ -305,7 +285,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  No, this is a team-based competition. Teams must have 3-4 members to encourage collaboration and
+                  No, this is a team-based competition. Teams must have 4 members to encourage collaboration and
                   diverse skill sets.
                 </p>
               </CardContent>
@@ -355,7 +335,7 @@ export default function ContactPage() {
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2025 NuraNext - Organized by Know I Club, SVCE. All rights reserved.
+            © 2025 NeuroNexus - Organized by Know I Club, SVCE. All rights reserved.
           </p>
         </div>
       </footer>

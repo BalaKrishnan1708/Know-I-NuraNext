@@ -21,18 +21,23 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 gradient-hero">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="animate-float">
-              <h1 className="text-6xl md:text-8xl font-bold text-balance mb-6 text-primary">
-                NeuroNexus 2025
-              </h1>
-            </div>
+            <div className="text-center">
+              <div className="animate-float">
+                <img 
+                  src="/logo-kowni.png" 
+                  alt="NeuroNexus Logo" 
+                  className="h-16 w-auto mx-auto mb-4"
+                />
+                <h1 className="text-6xl md:text-8xl font-bold text-balance mb-6 text-primary">
+                  NeuroNexus 2025
+                </h1>
+              </div>
             <p className="text-xl md:text-2xl text-muted-foreground mb-4 text-balance relative">
               <span className="glow-dot text-accent absolute -top-2 -left-4"></span>
-              Fueling Innovation, One Model at a Time
+              Where Infinity Meets Innovation
               <span className="glow-dot text-secondary absolute -bottom-2 -right-4"></span>
             </p>
-            <p className="text-lg md:text-xl text-accent mb-8 text-balance">Where Infinity Meets Machine Learning</p>
+            <p className="text-lg md:text-xl text-accent mb-8 text-balance">A 24-hour machine learning intercollege hackathon</p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Badge variant="secondary" className="text-lg px-4 py-2">
                 <Calendar className="w-4 h-4 mr-2" />
@@ -40,11 +45,14 @@ export default function HomePage() {
               </Badge>
               <Badge variant="outline" className="text-lg px-4 py-2">
                 <MapPin className="w-4 h-4 mr-2" />
-                Yuniq, TIDEL Park, Tharamani
-              </Badge>
-              <Badge variant="outline" className="text-lg px-4 py-2">
-                <Clock className="w-4 h-4 mr-2" />
-                24 Hours
+                <a 
+                  href="https://maps.app.goo.gl/RzsztAzGNu4ZjX6W8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Yuniq, TIDEL Park, Tharamani
+                </a>
               </Badge>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -58,12 +66,14 @@ export default function HomePage() {
                   Register Now
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-4 bg-transparent" asChild>
-                <a href="/problems">
-                  <Target className="w-5 h-5 mr-2" />
-                  View Challenges
-                </a>
-              </Button>
+              <div className="flex justify-center">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-4 bg-transparent" asChild>
+                  <a href="/problems">
+                    <Target className="w-5 h-5 mr-2" />
+                    View Challenges
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -84,9 +94,9 @@ export default function HomePage() {
               </h2>
             </div>
             <p className="text-lg text-muted-foreground mb-6">
-              Join the ultimate tech competition by Know I Club of SVCE
+              Your chance to solve real-world problems and win big.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <Button size="lg" className="text-lg px-8 py-4 glow-button" asChild>
                 <a
                   href="https://knowi-2025.vercel.app/"
@@ -94,15 +104,6 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                 >
                   Visit Know I Club
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-4 bg-transparent" asChild>
-                <a
-                  href="https://forms.gle/Hx4WotZesxX5mgZH6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Register Now
                 </a>
               </Button>
             </div>
@@ -174,25 +175,34 @@ export default function HomePage() {
               <CardTitle className="text-3xl text-center">Event Highlights</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-3 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-primary">What to Expect</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-primary">What to Expect 💡</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Machine Learning Problem Statements</li>
-                    <li>• 24-Hour Intensive Hackathon</li>
-                    <li>• Mentorship from ML Experts</li>
-                    <li>• Networking with AI Enthusiasts</li>
-                    <li>• Cash Prizes and Recognition</li>
+                    <li>🚀 Real-World ML Challenges</li>
+                    <li>⏱️ 24 Hours of Nonstop Hacking</li>
+                    <li>👨‍🏫 Mentorship from seasoned ML Experts</li>
+                    <li>🤝 Networking with fellow AI Enthusiasts</li>
+                    <li>🏆 Exciting Cash Prizes & Recognition</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-secondary">Competition Format</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-secondary">Competition Format 🔮</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Team-based ML Competition</li>
-                    <li>• Model Development & Training</li>
-                    <li>• Live Demo Sessions</li>
-                    <li>• Judging by ML Professionals</li>
-                    <li>• Innovation & Impact Awards</li>
+                    <li>👥 Teams of 4</li>
+                    <li>⚙️ Develop and Training Models</li>
+                    <li>🎤 Pitch your ideas</li>
+                    <li>🧑‍💻 Judging by Industry Professionals</li>
+                    <li>🌍 Awards for Innovation & Impact</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-accent">Why NeuroNexus? ♾️</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>🌟 Cutting-edge domains: Quantum Computing, Biomedical AI, FinTech</li>
+                    <li>🎁 Certificates & Swags for Participants</li>
+                    <li>🏅 Exposure to Industry-Level Problems</li>
+                    <li>🔗 Gateway to Networking, Internships & Future Opportunities</li>
                   </ul>
                 </div>
               </div>

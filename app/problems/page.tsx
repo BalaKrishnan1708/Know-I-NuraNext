@@ -18,83 +18,83 @@ export default function ProblemsPage() {
   const problemStatements = [
     {
       id: 1,
-      title: "AI-Powered Healthcare Assistant",
-      category: "Healthcare",
+      title: "Quantum Machine Learning for Drug Discovery",
+      category: "Quantum Computing & Biomedical AI",
       icon: Heart,
       description:
-        "Develop an AI system that can analyze medical symptoms, provide preliminary diagnosis suggestions, and connect patients with appropriate healthcare providers. The system should handle multiple languages and integrate with existing healthcare databases.",
+        "Develop a quantum machine learning algorithm to accelerate drug discovery by predicting molecular properties and interactions. The solution should leverage quantum computing principles to solve complex optimization problems in pharmaceutical research.",
     },
     {
       id: 2,
-      title: "Smart City Traffic Management",
-      category: "IoT & Smart Cities",
-      icon: Car,
+      title: "AI-Powered Financial Risk Assessment",
+      category: "FinTech",
+      icon: Shield,
       description:
-        "Create an intelligent traffic management system that uses real-time data from sensors, cameras, and mobile devices to optimize traffic flow, reduce congestion, and minimize environmental impact in urban areas.",
+        "Create an intelligent system that uses machine learning to assess financial risks in real-time, including credit scoring, fraud detection, and market volatility prediction. The system should integrate with existing financial databases and provide actionable insights.",
     },
     {
       id: 3,
-      title: "Cybersecurity Threat Detection",
-      category: "Security",
-      icon: Shield,
+      title: "Biomedical Image Analysis for Disease Detection",
+      category: "Biomedical AI",
+      icon: Brain,
       description:
-        "Build a comprehensive cybersecurity platform that can detect, analyze, and respond to various types of cyber threats in real-time. Include features for threat intelligence, incident response, and security awareness training.",
+        "Build a deep learning model that can analyze medical images (X-rays, MRIs, CT scans) to detect diseases and abnormalities. The solution should provide high accuracy, explainable results, and integrate with hospital management systems.",
     },
     {
       id: 4,
-      title: "Sustainable Energy Optimizer",
-      category: "Environment",
+      title: "Quantum-Enhanced Portfolio Optimization",
+      category: "Quantum Computing & FinTech",
       icon: Leaf,
       description:
-        "Design a system that optimizes energy consumption in buildings by analyzing usage patterns, weather data, and occupancy levels. Include renewable energy integration and carbon footprint tracking.",
+        "Design a quantum algorithm for portfolio optimization that considers multiple risk factors, market conditions, and investment constraints. The solution should outperform classical optimization methods and provide real-time portfolio recommendations.",
     },
     {
       id: 5,
-      title: "Personalized Learning Platform",
-      category: "Education",
+      title: "AI-Driven Personalized Medicine",
+      category: "Biomedical AI",
       icon: GraduationCap,
       description:
-        "Create an adaptive learning platform that personalizes educational content based on individual learning styles, progress, and preferences. Include gamification elements and progress tracking.",
+        "Develop a machine learning system that personalizes treatment plans based on patient genetics, medical history, and lifestyle factors. The solution should predict drug responses and recommend optimal treatment strategies.",
     },
     {
       id: 6,
-      title: "AR Shopping Experience",
-      category: "E-commerce",
+      title: "Quantum Cryptography for Financial Security",
+      category: "Quantum Computing & FinTech",
       icon: ShoppingCart,
       description:
-        "Develop an augmented reality application that allows customers to visualize products in their real environment before purchasing. Include features for size comparison, color variations, and social sharing.",
+        "Create a quantum cryptography system for secure financial transactions and data protection. The solution should implement quantum key distribution and quantum-resistant encryption for banking and fintech applications.",
     },
     {
       id: 7,
-      title: "Mental Health Support Bot",
-      category: "Healthcare",
+      title: "AI-Powered Drug Interaction Predictor",
+      category: "Biomedical AI",
       icon: Brain,
       description:
-        "Build an empathetic chatbot that provides mental health support, mood tracking, and connects users with professional resources. Ensure privacy, security, and crisis intervention capabilities.",
+        "Build an AI system that predicts drug-drug interactions and adverse effects by analyzing molecular structures, patient data, and clinical outcomes. The solution should help healthcare providers make safer prescription decisions.",
     },
     {
       id: 8,
-      title: "Smart Home Automation",
-      category: "IoT",
+      title: "Quantum Machine Learning for Market Prediction",
+      category: "Quantum Computing & FinTech",
       icon: Building,
       description:
-        "Create a comprehensive smart home system that automates lighting, temperature, security, and entertainment systems based on user preferences and occupancy patterns.",
+        "Develop a quantum machine learning model for predicting financial market trends and stock prices. The solution should leverage quantum algorithms to process large-scale financial data and provide accurate predictions.",
     },
     {
       id: 9,
-      title: "Fitness Gamification App",
-      category: "Health & Fitness",
+      title: "AI-Enhanced Medical Diagnosis Assistant",
+      category: "Biomedical AI",
       icon: Gamepad2,
       description:
-        "Design a mobile application that gamifies fitness activities, includes social challenges, progress tracking, and integrates with wearable devices to encourage healthy lifestyle habits.",
+        "Create an AI-powered diagnostic assistant that helps doctors analyze symptoms, medical history, and test results to suggest possible diagnoses. The system should provide confidence scores and reasoning for its recommendations.",
     },
     {
       id: 10,
-      title: "Voice-Controlled Assistant",
-      category: "AI & Voice",
+      title: "Quantum-Enhanced Fraud Detection",
+      category: "Quantum Computing & FinTech",
       icon: Smartphone,
       description:
-        "Develop a voice-controlled assistant that can perform various tasks like setting reminders, answering questions, controlling smart devices, and providing personalized recommendations.",
+        "Develop a quantum-enhanced fraud detection system for financial transactions that can identify complex fraud patterns and anomalies in real-time. The solution should use quantum algorithms to process large datasets efficiently.",
     },
   ]
 
@@ -208,22 +208,22 @@ export default function ProblemsPage() {
                 <CardTitle className="text-2xl text-primary">Team Formation</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p>• Teams must consist of 3-4 members</p>
-                <p>• Cross-disciplinary teams are encouraged</p>
-                <p>• Each team can choose only ONE problem statement</p>
-                <p>• Team registration closes 24 hours before the event</p>
+                <p>• Teams of 4 members</p>
+                <p>• Interdepartment teams from 2nd-4th years</p>
+                <p>• Each team can choose only one problem statement</p>
+                <p>• Shortlisted teams are requested to pay ₹200 per head to confirm registration</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-secondary">Submission Guidelines</CardTitle>
+                <CardTitle className="text-2xl text-secondary">Abstract Submission</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p>• Working prototype/demo is mandatory</p>
-                <p>• PPT presentation (max 10 slides)</p>
-                <p>• Source code must be submitted</p>
-                <p>• Documentation and setup instructions required</p>
+                <p>• Abstracts must be between 150-300 words</p>
+                <p>• Abstracts are to be submitted through the registration forms</p>
+                <p>• Teams will be shortlisted based on their abstracts</p>
+                <p>• Evaluation based on relevance, innovation, and technical feasibility</p>
               </CardContent>
             </Card>
 
@@ -232,24 +232,23 @@ export default function ProblemsPage() {
                 <CardTitle className="text-2xl text-accent">Judging Criteria</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p>• Innovation and Creativity (30%)</p>
-                <p>• Technical Implementation (25%)</p>
-                <p>• Problem Solving Approach (20%)</p>
-                <p>• Presentation and Demo (15%)</p>
-                <p>• User Experience (10%)</p>
+                <p>• Relevance to Problem Statement</p>
+                <p>• Innovation & Creativity</p>
+                <p>• Technical Feasibility</p>
+                <p>• Clarity of Abstract</p>
+                <p>• Impact & Applicability</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">Timeline</CardTitle>
+                <CardTitle className="text-2xl text-primary">Important Dates</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p>• Registration: Until Oct 9, 2025</p>
-                <p>• Competition: Oct 10-11, 2025</p>
-                <p>• Submission Deadline: Oct 11, 6:00 PM</p>
-                <p>• Final Presentations: Oct 11, 7:00 PM</p>
-                <p>• Results Announcement: Oct 11, 9:00 PM</p>
+                <p>• Registration and abstract submission until Oct 5, 2025</p>
+                <p>• Results for shortlisted teams Oct 7, 2025</p>
+                <p>• Closure of registration for shortlisted teams Oct 9, 2025</p>
+                <p>• Competition Oct 11-12, 2025</p>
               </CardContent>
             </Card>
           </div>
@@ -283,7 +282,7 @@ export default function ProblemsPage() {
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2025 NuraNext - Organized by Know I Club, SVCE. All rights reserved.
+            © 2025 NeuroNexus - Organized by Know I Club, SVCE. All rights reserved.
           </p>
         </div>
       </footer>
