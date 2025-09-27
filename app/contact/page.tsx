@@ -108,32 +108,34 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance text-primary">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-balance text-primary">
             Timeline and Contact
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-balance max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 text-balance max-w-3xl mx-auto px-4">
             Get all the information you need about the NeuroNexus timeline, submission guidelines, and how to reach us.
           </p>
-          <div className="mb-8">
-            <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="mb-8 px-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
               <img 
                 src="/logo-kowni.png" 
                 alt="Know I Club" 
-                className="h-8 w-auto"
+                className="h-6 sm:h-8 w-auto"
               />
-              <p className="text-lg text-primary">
+              <p className="text-base sm:text-lg text-primary text-center">
                 Organized by <span className="font-bold glow-purple">Know I Club</span> of SVCE
               </p>
             </div>
-            <Button variant="outline" className="bg-transparent" asChild>
-              <a
-                href="https://knowi-2025.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit Know I Club
-              </a>
-            </Button>
+            <div className="flex justify-center">
+              <Button variant="outline" className="bg-transparent w-full sm:w-auto" asChild>
+                <a
+                  href="https://knowi-2025.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Know I Club
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -141,29 +143,29 @@ export default function ContactPage() {
       {/* Timeline Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 px-4">
             Event <span className="text-primary">Timeline</span>
           </h2>
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
+            <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
 
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               {timeline.map((event, index) => {
                 const IconComponent = event.icon
                 return (
-                  <div key={index} className="relative flex items-start space-x-6">
+                  <div key={index} className="relative flex items-start space-x-4 sm:space-x-6">
                     {/* Timeline dot */}
                     <div className="relative z-10">
                       <div
-                        className={`w-16 h-16 rounded-full flex items-center justify-center border-4 ${
+                        className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center border-4 ${
                           event.status === "completed"
                             ? "bg-green-500/20 border-green-500 shadow-lg shadow-green-500/30"
                             : "bg-primary/20 border-primary shadow-lg shadow-primary/30"
                         }`}
                       >
                         <IconComponent
-                          className={`w-6 h-6 ${event.status === "completed" ? "text-green-400" : "text-primary"}`}
+                          className={`w-4 h-4 sm:w-6 sm:h-6 ${event.status === "completed" ? "text-green-400" : "text-primary"}`}
                         />
                       </div>
                     </div>
@@ -176,16 +178,16 @@ export default function ContactPage() {
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <CardHeader>
-                        <div className="flex items-center justify-between mb-2">
-                          <CardTitle className="text-xl">{event.title}</CardTitle>
-                          <Badge variant={event.status === "completed" ? "default" : "secondary"}>
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                          <CardTitle className="text-lg sm:text-xl">{event.title}</CardTitle>
+                          <Badge variant={event.status === "completed" ? "default" : "secondary"} className="w-fit">
                             {event.status === "completed" ? "Completed" : "Upcoming"}
                           </Badge>
                         </div>
-                        <CardDescription className="text-sm text-muted-foreground font-medium">
+                        <CardDescription className="text-xs sm:text-sm text-muted-foreground font-medium">
                           {event.date}
                         </CardDescription>
-                        <p className="text-foreground mt-2">{event.description}</p>
+                        <p className="text-sm sm:text-base text-foreground mt-2">{event.description}</p>
                       </CardHeader>
                     </Card>
                   </div>
@@ -200,42 +202,42 @@ export default function ContactPage() {
       {/* Contact Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 px-4">
             Contact <span className="text-primary">Information</span>
           </h2>
 
           {/* Venue Information */}
           <Card className="mb-12 bg-gradient-to-r from-card to-muted/20">
             <CardHeader>
-              <CardTitle className="text-3xl text-center flex items-center justify-center">
-                <MapPin className="w-8 h-8 mr-3 text-primary" />
+              <CardTitle className="text-2xl sm:text-3xl text-center flex flex-col sm:flex-row items-center justify-center gap-2">
+                <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 Venue Details
               </CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-primary">Yuniq</h3>
-                  <p className="text-muted-foreground">TIDEL Park, Tharamani</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-primary">Yuniq</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">TIDEL Park, Tharamani</p>
                   <a 
                     href="https://maps.app.goo.gl/RzsztAzGNu4ZjX6W8" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 transition-colors underline"
+                    className="text-primary hover:text-primary/80 transition-colors underline text-sm sm:text-base"
                   >
                     View on Google Maps
                   </a>
                 </div>
-                <div className="grid md:grid-cols-2 gap-8 mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8">
                   <div>
-                    <h4 className="font-semibold mb-2 text-secondary">Venue</h4>
-                    <p className="text-muted-foreground">Yuniq, TIDEL Park</p>
-                    <p className="text-muted-foreground">Tharamani, Chennai</p>
+                    <h4 className="font-semibold mb-2 text-secondary text-base sm:text-lg">Venue</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground">Yuniq, TIDEL Park</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">Tharamani, Chennai</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-accent">Facilities</h4>
-                    <p className="text-muted-foreground">Internet, Food, Refreshments</p>
-                    <p className="text-muted-foreground">Plug Points</p>
+                    <h4 className="font-semibold mb-2 text-accent text-base sm:text-lg">Facilities</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground">Internet, Food, Refreshments</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">Plug Points</p>
                   </div>
                 </div>
               </div>
@@ -243,7 +245,7 @@ export default function ContactPage() {
           </Card>
 
           {/* Contact Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {contacts.map((contact, index) => (
               <Card
                 key={index}
@@ -251,24 +253,24 @@ export default function ContactPage() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
-                  <CardTitle className="text-lg">{contact.name}</CardTitle>
-                  <CardDescription className="text-primary font-medium">{contact.role}</CardDescription>
+                  <CardTitle className="text-base sm:text-lg">{contact.name}</CardTitle>
+                  <CardDescription className="text-primary font-medium text-sm sm:text-base">{contact.role}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4 text-muted-foreground" />
+                    <Mail className="w-4 h-4 text-muted-foreground flex-shrink-0" />
                     <a
                       href={`mailto:${contact.email}`}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                     >
                       {contact.email}
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4 text-muted-foreground" />
+                    <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
                     <a
                       href={`tel:${contact.phone}`}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
                       {contact.phone}
                     </a>
@@ -283,16 +285,16 @@ export default function ContactPage() {
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 px-4">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">Can I participate individually?</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">Can I participate individually?</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground">
                   No, this is a team-based competition. Teams must have 4 members to encourage collaboration and
                   diverse skill sets.
                 </p>
@@ -301,10 +303,10 @@ export default function ContactPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">What if my team can't complete the solution in time?</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">What if my team can't complete the solution in time?</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground">
                   Partial solutions are accepted. Focus on demonstrating your approach, problem-solving skills, and what
                   you've accomplished within the timeframe.
                 </p>
@@ -313,10 +315,10 @@ export default function ContactPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">Are there any restrictions on technology stack?</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">Are there any restrictions on technology stack?</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground">
                   No restrictions! Use any programming languages, frameworks, or tools that best suit your solution.
                   However, ensure your solution can be demonstrated during the presentation.
                 </p>
@@ -325,10 +327,10 @@ export default function ContactPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">What are the prizes?</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">What are the prizes?</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground">
                   Cash prizes, certificates, and internship opportunities with our sponsor companies. Detailed prize
                   structure will be announced during the opening ceremony.
                 </p>

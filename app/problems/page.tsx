@@ -119,50 +119,52 @@ export default function ProblemsPage() {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance text-primary">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-balance text-primary">
             Problem Statements
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-balance max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 text-balance max-w-3xl mx-auto px-4">
             Choose your challenge and showcase your innovative solutions. Each problem is designed to test different
             aspects of modern technology development.
           </p>
-          <div className="mb-8">
-            <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="mb-8 px-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
               <img 
                 src="/logo-kowni.png" 
                 alt="Know I Club" 
-                className="h-8 w-auto"
+                className="h-6 sm:h-8 w-auto"
               />
-              <p className="text-lg text-primary">
+              <p className="text-base sm:text-lg text-primary text-center">
                 Organized by <span className="font-bold glow-purple">Know I Club</span> of SVCE
               </p>
             </div>
-            <Button variant="outline" className="bg-transparent" asChild>
-              <a
-                href="https://knowi-2025.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit Know I Club
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button variant="outline" className="bg-transparent w-full sm:w-auto" asChild>
+                <a
+                  href="https://knowi-2025.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Know I Club
+                </a>
+              </Button>
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 animate-glow w-full sm:w-auto" asChild>
+                <a
+                  href="https://forms.gle/Hx4WotZesxX5mgZH6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register to Participate
+                </a>
+              </Button>
+            </div>
           </div>
-          <Button size="lg" className="text-lg px-8 py-4 animate-glow" asChild>
-            <a
-              href="https://forms.gle/Hx4WotZesxX5mgZH6"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Register to Participate
-            </a>
-          </Button>
         </div>
       </section>
 
       {/* Problems Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {problemStatements.map((problem, index) => {
               const IconComponent = problem.icon
               return (
@@ -175,20 +177,20 @@ export default function ProblemsPage() {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-3">
                         <div className="p-2 rounded-lg bg-primary/20">
-                          <IconComponent className="w-6 h-6 text-primary" />
+                          <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                         </div>
-                        <div className="text-sm font-medium text-muted-foreground">
+                        <div className="text-xs sm:text-sm font-medium text-muted-foreground">
                           PS #{problem.id.toString().padStart(2, "0")}
                         </div>
                       </div>
                     </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <CardTitle className="text-lg sm:text-xl group-hover:text-primary transition-colors leading-tight">
                       {problem.title}
                     </CardTitle>
-                    <CardDescription className="text-sm text-muted-foreground">{problem.category}</CardDescription>
+                    <CardDescription className="text-xs sm:text-sm text-muted-foreground">{problem.category}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{problem.description}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{problem.description}</p>
                   </CardContent>
                 </Card>
               )
@@ -200,56 +202,56 @@ export default function ProblemsPage() {
       {/* Rules Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 px-4">
             Competition <span className="text-primary">Rules</span>
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">Team Formation</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl text-primary">Team Formation</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p>• Teams of 4 members</p>
-                <p>• Interdepartment teams from 2nd-4th years</p>
-                <p>• Each team can choose only one problem statement</p>
-                <p>• Shortlisted teams are requested to pay ₹200 per head to confirm registration</p>
+                <p className="text-sm sm:text-base">• Teams of 4 members</p>
+                <p className="text-sm sm:text-base">• Interdepartment teams from 2nd-4th years</p>
+                <p className="text-sm sm:text-base">• Each team can choose only one problem statement</p>
+                <p className="text-sm sm:text-base">• Shortlisted teams are requested to pay ₹200 per head to confirm registration</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-secondary">Abstract Submission</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl text-secondary">Abstract Submission</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p>• Abstracts must be between 150-300 words</p>
-                <p>• Abstracts are to be submitted through the registration forms</p>
-                <p>• Teams will be shortlisted based on their abstracts</p>
-                <p>• Evaluation based on relevance, innovation, and technical feasibility</p>
+                <p className="text-sm sm:text-base">• Abstracts must be between 150-300 words</p>
+                <p className="text-sm sm:text-base">• Abstracts are to be submitted through the registration forms</p>
+                <p className="text-sm sm:text-base">• Teams will be shortlisted based on their abstracts</p>
+                <p className="text-sm sm:text-base">• Evaluation based on relevance, innovation, and technical feasibility</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-accent">Judging Criteria</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl text-accent">Judging Criteria</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p>• Relevance to Problem Statement</p>
-                <p>• Innovation & Creativity</p>
-                <p>• Technical Feasibility</p>
-                <p>• Clarity of Abstract</p>
-                <p>• Impact & Applicability</p>
+                <p className="text-sm sm:text-base">• Relevance to Problem Statement</p>
+                <p className="text-sm sm:text-base">• Innovation & Creativity</p>
+                <p className="text-sm sm:text-base">• Technical Feasibility</p>
+                <p className="text-sm sm:text-base">• Clarity of Abstract</p>
+                <p className="text-sm sm:text-base">• Impact & Applicability</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">Important Dates</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl text-primary">Important Dates</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p>• Registration and abstract submission until Oct 5, 2025</p>
-                <p>• Results for shortlisted teams Oct 7, 2025</p>
-                <p>• Closure of registration for shortlisted teams Oct 9, 2025</p>
-                <p>• Competition Oct 11-12, 2025</p>
+                <p className="text-sm sm:text-base">• Registration and abstract submission until Oct 5, 2025</p>
+                <p className="text-sm sm:text-base">• Results for shortlisted teams Oct 7, 2025</p>
+                <p className="text-sm sm:text-base">• Closure of registration for shortlisted teams Oct 9, 2025</p>
+                <p className="text-sm sm:text-base">• Competition Oct 11-12, 2025</p>
               </CardContent>
             </Card>
           </div>
@@ -259,14 +261,14 @@ export default function ProblemsPage() {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
             Ready to <span className="text-primary">Code</span> Your Solution?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 text-balance">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-8 text-balance px-4">
             Pick your challenge, form your team, and let's build the future together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-xl px-12 py-6 animate-glow" asChild>
+          <div className="flex justify-center px-4">
+            <Button size="lg" className="text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 animate-glow w-full sm:w-auto" asChild>
               <a
                 href="https://forms.gle/Hx4WotZesxX5mgZH6"
                 target="_blank"
