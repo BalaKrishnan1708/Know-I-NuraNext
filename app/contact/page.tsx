@@ -37,7 +37,7 @@ export default function ContactPage() {
     {
       date: "11th-12th October",
       title: "NeuroNexus Hackathon",
-      description: "24-hour Machine Learning hackathon at Yuniq, TIDEL Park, Tharamani",
+      description: "24-hour Machine Learning hackathon at Yuniq, TICEL Park, Tharamani",
       status: "upcoming",
       icon: Trophy,
     },
@@ -147,9 +147,6 @@ export default function ContactPage() {
             Event <span className="text-primary">Timeline</span>
           </h2>
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 sm:left-8 top-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent" style={{ height: 'calc(100% - 2rem)' }}></div>
-
             <div className="space-y-8 sm:space-y-12 pb-8">
               {timeline.map((event, index) => {
                 const IconComponent = event.icon
@@ -218,7 +215,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold text-primary">Yuniq</h3>
-                  <p className="text-sm sm:text-base text-muted-foreground">TIDEL Park, Tharamani</p>
+                  <p className="text-sm sm:text-base text-muted-foreground">TICEL Park, Tharamani</p>
                   <a 
                     href="https://maps.app.goo.gl/RzsztAzGNu4ZjX6W8" 
                     target="_blank" 
@@ -231,7 +228,7 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8">
                   <div>
                     <h4 className="font-semibold mb-2 text-secondary text-base sm:text-lg">Venue</h4>
-                    <p className="text-sm sm:text-base text-muted-foreground">Yuniq, TIDEL Park</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">Yuniq, TICEL Park</p>
                     <p className="text-sm sm:text-base text-muted-foreground">Tharamani, Chennai</p>
                   </div>
                   <div>

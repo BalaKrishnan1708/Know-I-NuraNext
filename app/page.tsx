@@ -51,7 +51,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  Yuniq, TIDEL Park, Tharamani
+                  Yuniq, TICEL Park, Tharamani
                 </a>
               </Badge>
             </div>
