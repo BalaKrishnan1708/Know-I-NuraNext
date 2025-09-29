@@ -1,18 +1,20 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Brain,
   Smartphone,
   Shield,
-  Leaf,
   Heart,
   GraduationCap,
   ShoppingCart,
   Gamepad2,
-  Car,
   Building,
   Users,
+  Calendar,
+  FileText,
+  Target,
+  Sparkles,
 } from "lucide-react"
 
 export default function ProblemsPage() {
@@ -99,196 +101,242 @@ export default function ProblemsPage() {
     },
   ]
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case "Easy":
-        return "bg-green-500/20 text-green-400 border-green-500/30"
-      case "Medium":
-        return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
-      case "Hard":
-        return "bg-red-500/20 text-red-400 border-red-500/30"
-      default:
-        return "bg-gray-500/20 text-gray-400 border-gray-500/30"
-    }
-  }
+  const rules = [
+    {
+      icon: Users,
+      title: "Team Formation",
+      items: [
+        "Teams of 4 members",
+        "Interdepartment teams from 2nd-4th years",
+        "Each team can choose only one problem statement",
+        "Shortlisted teams pay ₹200 per head to confirm registration",
+      ],
+    },
+    {
+      icon: FileText,
+      title: "Abstract Submission",
+      items: [
+        "Abstracts must be between 150-300 words",
+        "Submit through the registration forms",
+        "Teams shortlisted based on abstracts",
+        "Evaluated on relevance, innovation, and technical feasibility",
+      ],
+    },
+    {
+      icon: Target,
+      title: "Judging Criteria",
+      items: [
+        "Relevance to Problem Statement",
+        "Innovation & Creativity",
+        "Technical Feasibility",
+        "Clarity of Abstract",
+        "Impact & Applicability",
+      ],
+    },
+    {
+      icon: Calendar,
+      title: "Important Dates",
+      items: [
+        "Registration and abstract submission until Oct 5, 2025",
+        "Results for shortlisted teams Oct 7, 2025",
+        "Closure of registration for shortlisted teams Oct 9, 2025",
+        "Competition Oct 11-12, 2025",
+      ],
+    },
+  ]
 
   return (
-    <div className="min-h-screen gradient-bg">
-      <Navigation />
+    <div className="min-h-screen relative bg-black">
+      {/* Subtle gradient background */}
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-white/[0.02] via-black to-white/[0.01]" />
+      <div className="relative z-10">
+        <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-balance text-primary">
-            Problem Statements
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 text-balance max-w-3xl mx-auto px-4">
-            Choose your challenge and showcase your innovative solutions. Each problem is designed to test different
-            aspects of modern technology development.
-          </p>
-          <div className="mb-8 px-4">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
-              <img 
-                src="/logo-kowni.png" 
-                alt="Know I Club" 
-                className="h-6 sm:h-8 w-auto"
-              />
-              <p className="text-base sm:text-lg text-primary text-center">
-                Organized by <span className="font-bold glow-purple">Know I Club</span> of SVCE
+        {/* Hero Section */}
+        <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 bg-white/5 backdrop-blur-sm mb-6">
+                <Sparkles className="w-4 h-4 text-white/70" />
+                <span className="text-sm text-white/70 uppercase tracking-wider">10 Challenges</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+                Problem Statements
+              </h1>
+              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+                Choose your challenge and showcase your innovative solutions. Each problem is designed to push the boundaries of AI and machine learning.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button variant="outline" className="bg-transparent w-full sm:w-auto" asChild>
-                <a
-                  href="https://knowi-2025.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Know I Club
-                </a>
-              </Button>
-              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 animate-glow w-full sm:w-auto" asChild>
+          </div>
+        </section>
+
+        {/* Problems Grid */}
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="space-y-6">
+              {problemStatements.map((problem) => {
+                const IconComponent = problem.icon
+                return (
+                  <div
+                    key={problem.id}
+                    className="group relative border border-white/20 bg-gradient-to-br from-white/[0.05] to-black/30 hover:border-white/40 transition-all duration-300"
+                  >
+                    <div className="p-6">
+                      <div className="grid md:grid-cols-[auto_1fr] gap-6">
+                        {/* Left side: Number, Icon and Category */}
+                        <div className="flex md:flex-col items-start gap-4">
+                          {/* Number Badge */}
+                          <div className="w-12 h-12 border-2 border-white/30 bg-black flex items-center justify-center group-hover:border-white/60 transition-all flex-shrink-0">
+                            <span className="text-xl font-bold text-white/80">{problem.id.toString().padStart(2, '0')}</span>
+                          </div>
+                          
+                          {/* Icon */}
+                          <div className="w-12 h-12 border border-white/20 bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-all flex-shrink-0">
+                            <IconComponent className="w-6 h-6 text-white/80" />
+                          </div>
+                        </div>
+
+                        {/* Right side: Content */}
+                        <div className="space-y-3">
+                          <div className="flex flex-col gap-2">
+                            <div className="text-xs text-white/50 uppercase tracking-wider">
+                              {problem.category}
+                            </div>
+                            <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-white/90 transition-colors leading-tight">
+                              {problem.title}
+                            </h3>
+                          </div>
+                          <p className="text-sm sm:text-base text-white/60 leading-relaxed">
+                            {problem.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Rules Section */}
+        <section className="pt-20 pb-40 sm:pb-48 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+                Competition Rules
+              </h2>
+              <p className="text-base sm:text-lg text-white/60">
+                Everything you need to know before participating
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {rules.map((rule, index) => {
+                const IconComponent = rule.icon
+                return (
+                  <div
+                    key={index}
+                    className="border border-white/20 bg-gradient-to-br from-black/30 to-white/[0.05] hover:border-white/40 transition-all group"
+                  >
+                    {/* Header */}
+                    <div className="flex items-center gap-4 p-6 border-b border-white/10">
+                      <div className="w-12 h-12 border border-white/30 bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-white/10 transition-all">
+                        <IconComponent className="w-6 h-6 text-white/80" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{rule.title}</h3>
+                    </div>
+
+                    {/* Items */}
+                    <div className="p-6 space-y-4">
+                      {rule.items.map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-white/50 mt-2 flex-shrink-0" />
+                          <p className="text-sm text-white/70 leading-relaxed flex-1">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Footer with Overlaid CTA */}
+        <footer className="relative pt-64 sm:pt-72 pb-16 px-4 sm:px-6 lg:px-8 border-t border-white/10 overflow-visible">
+          {/* Large Watermark Text */}
+          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center pointer-events-none overflow-hidden px-4">
+            <h2 
+              className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-black text-transparent whitespace-nowrap select-none"
+              style={{
+                WebkitTextStroke: '1px rgba(255, 255, 255, 0.08)',
+                letterSpacing: '-0.05em',
+              }}
+            >
+              NEURONEXUS
+            </h2>
+          </div>
+
+          {/* Overlaid CTA Section */}
+          <div className="absolute top-0 left-0 right-0 -translate-y-1/2 z-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="border border-white/30 bg-black/90 backdrop-blur-xl p-8 sm:p-12 text-center shadow-2xl">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Take on the Challenge?
+                </h2>
+                <p className="text-lg sm:text-xl text-white/60 mb-8 max-w-2xl mx-auto">
+                  Pick your problem statement, assemble your team, and start building the future of AI.
+                </p>
                 <a
                   href="https://forms.gle/Hx4WotZesxX5mgZH6"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-white border border-white/30 hover:border-white hover:bg-white/5 px-8 py-4 transition-all hover:gap-3 group text-base font-medium"
                 >
-                  Register to Participate
+                  <span>Register Your Team Now</span>
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
                 </a>
-              </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Problems Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {problemStatements.map((problem, index) => {
-              const IconComponent = problem.icon
-              return (
-                <Card
-                  key={problem.id}
-                  className="group hover:scale-105 transition-all duration-300 animate-float border-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardHeader>
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center space-x-3">
-                        <div className="p-2 rounded-lg bg-primary/20">
-                          <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                        </div>
-                        <div className="text-xs sm:text-sm font-medium text-muted-foreground">
-                          PS #{problem.id.toString().padStart(2, "0")}
-                        </div>
-                      </div>
-                    </div>
-                    <CardTitle className="text-lg sm:text-xl group-hover:text-primary transition-colors leading-tight">
-                      {problem.title}
-                    </CardTitle>
-                    <CardDescription className="text-xs sm:text-sm text-muted-foreground">{problem.category}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{problem.description}</p>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+          <div className="max-w-7xl mx-auto relative z-10">
+            {/* Club Logo and Name */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <img 
+                src="/logo-kowni.png" 
+                alt="Know I Club" 
+                className="h-12 sm:h-16 w-auto opacity-90"
+              />
+              <div className="text-left">
+                <h3 className="text-lg sm:text-xl font-bold text-white">KNOW I CLUB</h3>
+                <p className="text-xs sm:text-sm text-white/60">Sri Venkateswara College of Engineering</p>
+              </div>
+            </div>
 
-      {/* Rules Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 px-4">
-            Competition <span className="text-primary">Rules</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl text-primary">Team Formation</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm sm:text-base">• Teams of 4 members</p>
-                <p className="text-sm sm:text-base">• Interdepartment teams from 2nd-4th years</p>
-                <p className="text-sm sm:text-base">• Each team can choose only one problem statement</p>
-                <p className="text-sm sm:text-base">• Shortlisted teams are requested to pay ₹200 per head to confirm registration</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl text-secondary">Abstract Submission</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm sm:text-base">• Abstracts must be between 150-300 words</p>
-                <p className="text-sm sm:text-base">• Abstracts are to be submitted through the registration forms</p>
-                <p className="text-sm sm:text-base">• Teams will be shortlisted based on their abstracts</p>
-                <p className="text-sm sm:text-base">• Evaluation based on relevance, innovation, and technical feasibility</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl text-accent">Judging Criteria</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm sm:text-base">• Relevance to Problem Statement</p>
-                <p className="text-sm sm:text-base">• Innovation & Creativity</p>
-                <p className="text-sm sm:text-base">• Technical Feasibility</p>
-                <p className="text-sm sm:text-base">• Clarity of Abstract</p>
-                <p className="text-sm sm:text-base">• Impact & Applicability</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl text-primary">Important Dates</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm sm:text-base">• Registration and abstract submission until Oct 5, 2025</p>
-                <p className="text-sm sm:text-base">• Results for shortlisted teams Oct 7, 2025</p>
-                <p className="text-sm sm:text-base">• Closure of registration for shortlisted teams Oct 9, 2025</p>
-                <p className="text-sm sm:text-base">• Competition Oct 11-12, 2025</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Ready to <span className="text-primary">Code</span> Your Solution?
-          </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground mb-8 text-balance px-4">
-            Pick your challenge, form your team, and let's build the future together.
-          </p>
-          <div className="flex justify-center px-4">
-            <Button size="lg" className="text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 animate-glow w-full sm:w-auto" asChild>
-              <a
-                href="https://forms.gle/Hx4WotZesxX5mgZH6"
-                target="_blank"
+            {/* Quick Links */}
+            <div className="flex flex-wrap justify-center gap-6 mb-6 text-sm text-white/60">
+              <a href="/" className="hover:text-white transition-colors">Home</a>
+              <a href="/problems" className="hover:text-white transition-colors">Problems</a>
+              <a href="/contact" className="hover:text-white transition-colors">Contact</a>
+              <a 
+                href="https://knowi-2025.vercel.app/" 
+                target="_blank" 
                 rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
               >
-                Register Your Team
+                Know I Club
               </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-muted-foreground">
-            © 2025 NeuroNexus - Organized by Know I Club, SVCE. All rights reserved.
-          </p>
-        </div>
-      </footer>
+            {/* Copyright */}
+            <div className="text-center text-xs text-white/40">
+              <p>© 2025 NeuroNexus. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
   )
 }

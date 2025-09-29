@@ -9,92 +9,89 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16">
+<nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl">
+      <div className="bg-black/60 backdrop-blur-xl border border-white/10 px-6 py-3 shadow-2xl">
+        <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl sm:text-2xl font-bold text-primary logo-transparent">
+            <Link href="/" className="text-lg sm:text-xl font-semibold text-white tracking-tight">
               NeuroNexus
             </Link>
           </div>
 
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-2 lg:space-x-4">
-              <Link
-                href="/"
-                className="text-foreground hover:text-primary px-2 lg:px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/problems"
-                className="text-foreground hover:text-primary px-2 lg:px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Problem Statements
-              </Link>
-              <Link
-                href="/contact"
-                className="text-foreground hover:text-primary px-2 lg:px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Contact & Timeline
-              </Link>
-            </div>
-          </div>
-
-          <div className="hidden md:block">
-            <Button asChild className="animate-glow text-sm px-3 lg:px-4">
+          <div className="hidden md:flex items-center gap-1">
+            <Link
+              href="/"
+              className="text-white/70 hover:text-white px-4 py-2 text-sm font-medium transition-colors"
+            >
+              Home
+            </Link>
+            <Link
+              href="/problems"
+              className="text-white/70 hover:text-white px-4 py-2 text-sm font-medium transition-colors"
+            >
+              Problems
+            </Link>
+            <Link
+              href="/contact"
+              className="text-white/70 hover:text-white px-4 py-2 text-sm font-medium transition-colors"
+            >
+              Contact
+            </Link>
+            <div className="ml-4 pl-4 border-l border-white/10">
               <a
                 href="https://forms.gle/Hx4WotZesxX5mgZH6"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-white border border-white/30 hover:border-white px-4 py-2 text-xs font-medium transition-all hover:gap-2 group"
               >
-                Register Now
+                <span>Register</span>
+                <span className="transition-transform group-hover:translate-x-0.5">→</span>
               </a>
-            </Button>
+            </div>
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground hover:text-primary">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            <button onClick={() => setIsOpen(!isOpen)} className="text-white/70 hover:text-white p-2 transition-colors">
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card/95 backdrop-blur-md border-b border-border">
+        <div className="md:hidden mt-2">
+          <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-4 space-y-1">
             <Link
               href="/"
-              className="text-foreground hover:text-primary block px-3 py-3 rounded-md text-base font-medium transition-colors"
+              className="text-white/70 hover:text-white block px-3 py-2.5 text-sm font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/problems"
-              className="text-foreground hover:text-primary block px-3 py-3 rounded-md text-base font-medium transition-colors"
+              className="text-white/70 hover:text-white block px-3 py-2.5 text-sm font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Problem Statements
+              Problems
             </Link>
             <Link
               href="/contact"
-              className="text-foreground hover:text-primary block px-3 py-3 rounded-md text-base font-medium transition-colors"
+              className="text-white/70 hover:text-white block px-3 py-2.5 text-sm font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Contact & Timeline
+              Contact
             </Link>
-            <div className="px-3 py-2">
-              <Button asChild className="w-full animate-glow">
-                <a
-                  href="https://forms.gle/Hx4WotZesxX5mgZH6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Register Now
-                </a>
-              </Button>
+            <div className="pt-3 mt-3 border-t border-white/10">
+              <a
+                href="https://forms.gle/Hx4WotZesxX5mgZH6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 text-white border border-white/30 hover:border-white px-4 py-2.5 text-sm font-medium transition-all hover:gap-3 group w-full"
+              >
+                <span>Register Now</span>
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </a>
             </div>
           </div>
         </div>

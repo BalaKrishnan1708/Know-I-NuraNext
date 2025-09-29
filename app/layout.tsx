@@ -4,9 +4,8 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import { ParticleBackground } from "@/components/particle-background"
 import { InteractiveCursor } from "@/components/interactive-cursor"
-import { ScrollProgress } from "@/components/scroll-progress"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -21,14 +20,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <ParticleBackground />
-        <ScrollProgress />
-        <InteractiveCursor />
-        <div className="relative z-10">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased bg-black`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <InteractiveCursor />
           <Suspense fallback={null}>{children}</Suspense>
-        </div>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

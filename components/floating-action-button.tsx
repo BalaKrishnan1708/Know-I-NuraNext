@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
 import { ArrowUp } from "lucide-react"
 
 export function FloatingActionButton() {
@@ -32,17 +31,12 @@ export function FloatingActionButton() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
-      {/* Scroll to Top Button */}
-      <Button
-        size="lg"
-        variant="secondary"
-        className="rounded-full w-14 h-14 shadow-lg hover:shadow-xl transition-all duration-300"
-        onClick={scrollToTop}
-        title="Scroll to Top"
-      >
-        <ArrowUp className="w-6 h-6" />
-      </Button>
-    </div>
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-6 right-6 z-40 w-12 h-12 border border-white/30 bg-black/50 backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 group flex items-center justify-center"
+      title="Scroll to Top"
+    >
+      <ArrowUp className="w-5 h-5 text-white/70 group-hover:text-white group-hover:-translate-y-0.5 transition-all" />
+    </button>
   )
 }
